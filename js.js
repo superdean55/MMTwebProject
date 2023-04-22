@@ -93,15 +93,13 @@ for (var i = 0; i < mouseOverElements.length; i++) {
     audio.pause();
   });
   mouseOverElement[i].addEventListener("click", (event) => {
-    var url = "";
     if (event.currentTarget.id == "mo1") {
-      url = "history.html";
+      window.location.href = "history.html";
     } else if (event.currentTarget.id == "mo2") {
-      url = "rules.html";
-    } else {
-      url = "var.html";
+      window.location.href = "rules.html";
+    } else if (event.currentTarget.id == "mo3") {
+      window.location.href = "var.html";
     }
-    window.location.href = url;
   });
 }
 /* const footballHistory = document.getElementById("mo1");
