@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMT</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="ss.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='shortcut icon'> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  
+  <body>
+    <div class="center">
+      <div class="main-grid-container">
+        <div class="navbar-container">
+          <!-- <div class="navbar-wrapper"> -->
+          <a href="https://www.uefa.com/" target="_blank" class="align-center"
+            ><img src="logo.png" alt="" class="logo"
+          /></a>
+          <a href="https://www.fifa.com/" target="_blank" class="align-center"
+            ><img src="fifa.svg.png" alt="" class="logo"
+          /></a>
+          <a href="kosarka.html" class="margin-left anocher-remove-styles basketball" ><img src="images/kosarka/basketball-4264543__480.webp" width="100px" alt="basketball"><h3>Košarka</h3></a>
+          <a href="tennis.html" class="anocher-remove-styles basketball" ><img src="images/Tennis/768px-Tennis_ball_3.svg.png" width="50px" alt="Tennis"><h3>Tenis</h3></a>
+          <a class="anocher-remove-styles " href="#section-1"
+            ><h3 class="left-border">O nogometu</h3></a
+          >
+          <a class="anocher-remove-styles" href="#section-2"
+            ><h3 class="left-border">Galerija</h3></a
+          >
+          <a class="anocher-remove-styles" href="#section-3"
+            ><h3 class="left-border">Top 5 liga</h3></a
+          >
+          
+          <a href="#section-4" class="anocher-remove-styles"><h3 class="left-border">HNL</h3></a>
+          <a href="#section-5" class="anocher-remove-styles"><h3 class="left-border">HNS</h3></a>
+          <a class="anocher-remove-styles" href="#section-6"><h3 class="left-border">Autori</h3></a>
+          <!-- </div> -->
+        </div>
+        <div class="image-container">
+          <div class="image-wrapper">
+            <div class="music-player-container">
+              <div class="player">
+
+                <div class="header">
+                  Music <span>Player</span>
+                </div>
+              
+                <div class="img">
+                  <img class="img2" src="" id="thumb">
+                </div>
+                <div class="details">
+                  <h3 id="title"></h3>
+                  <p id="musician"></p>
+                </div>
+                <audio id="song">
+                  <source src="" type="audio/mp3">
+                  </source>
+                </audio>
+              
+                <div class="time">
+                  <span id="start">2:28</span>
+                  <span id="end">4:33</span>
+                </div>
+                <input type="range" id="progress" value="0">
+              
+                <div class="action">
+              
+                  <button onclick="prevPlay()">
+                    <i class="fa-solid fa-backward-step"></i>
+                    <!-- <i class="bx bx-skip-previous"></i> -->
+                  </button>
+              
+                  <button onclick="playPause()" class="play" id="play">
+                    <i class="fa-solid fa-play"></i>
+                    <!-- <i class="bx bx-play"></i> -->
+                  </button>
+              
+                  <button onclick="nextPlay()">
+                    <i class="fa-solid fa-forward-step"></i>
+                    <!-- <i class="bx bx-skip-next"></i> -->
+                  </button>
+              
+                </div>
+              </div>
+              
+            </div>
+            <div class="title-and-play-button-container">
+              <br><br>
+              <span class="football-main-title">Nogomet</span>
+              
+              <span class="play-icon"><i data-modal-target="#modalvideo1" class="fa-solid fa-circle-play fa-2xl"></i> video</span>
+            </div>
+          </div>
+          
+        </div>
+        <div class="content-container">
+          <div class="how-to-play-container">
+            <h1 id="section-1">O nogometu općenito</h1>
+          </div>
+          <div class="content-wrapper">
+            <div class="first-content-container box-shadow mouse-over-sound content-style" id="mo1">
+              <div class="first-content all-content-style"> 
+                <h1 class="h1-setup">Povijest nogometa</h1>
+                <img src="images/other_logo/history_book.png" width="150px" alt="History Book logo">
+              </div>
+            </div>
+            <div class="second-content-container box-shadow mouse-over-sound content-style" id="mo2">
+              <div class="second-content all-content-style">
+                <h1 class="h1-setup">Pravila igre</h1>
+                <img src="images/other_logo/whistle.png" width="100px "alt="">
+              </div>
+            </div>
+            <div class="third-content-container box-shadow mouse-over-sound content-style" id="mo3">
+              <div class="third-content all-content-style">
+                <h1 class="h1-setup">VAR tehnologija</h1>
+                <img src="images/other_logo/2560px-VAR_System_Logo.svg.png" width="100px" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-container">
+          <div class="gallery-title">
+            <div class="title-align-wrapper">
+              <h1 id="section-2">Najbolji nogometaši</h1>
+            </div>
+          </div>
+          <div class="gallery">
+            <img data-modal-target="#modal" src="images/best_players/Antoine-Griezmann-800x600.jpg" alt="Antoine Griezmann" />
+            <img data-modal-target="#modal2"
+              src="images/best_players/LukaModric.jpeg"
+              alt="a waterfall and many rocks"
+            />
+            <img data-modal-target="#modal3"
+              src="images/best_players/Cristiano Ronaldo.jpg"
+              alt="a house on a mountain"
+            />
+            <img data-modal-target="#modal4"
+              src="images/best_players/Lionel Messi.jpg"
+              alt="sime pink flowers"
+            />
+            <img data-modal-target="#modal5"
+              src="images/best_players/Kylian Mbappé.jpg"
+              alt="Kylian Mbappé"
+            />
+          </div>
+        </div>
+        <div class="best-leagues-container">
+          <div class="best-leagues-title">
+            <div class="title-align-wrapper">
+              <h1 id="section-3">Najboljih 5 nogometne liga na svijetu</h1>
+            </div>
+          </div>
+          <div class="best-leagues">
+            <a href="https://www.premierleague.com/"
+            target="_blank"><img
+                class="best-leagues-image"
+                src="images/top_leagues/Premier_League-Logo.wine.png"
+                alt=""
+            /></a>
+            <a href="https://www.laliga.com/en-GB"
+            target="_blank"><img class="best-leagues-image" src="images/top_leagues/laliga-h-1200x1200.png" alt=""
+            /></a>
+            <a href="https://www.bundesliga.com/en/bundesliga"
+            target="_blank"><img
+                class="best-leagues-image"
+                src="images/top_leagues/German-Bundesliga-Logo-2002.png"
+                alt=""
+            /></a>
+            <a href="https://www.legaseriea.it/en"
+            target="_blank"><img
+                class="best-leagues-image"
+                src="images/top_leagues/Italian-Serie-A-Logo-2019.png"
+                alt=""
+            /></a>
+            <a href="https://www.ligue1.com/"
+            target="_blank"><img class="best-leagues-image" src="images/top_leagues/1200px-Ligue1.svg.png" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="supersport-hnl-container">
+          <div class="supersport-title-container justify-content">
+            <h1 id="section-4">Hrvatska nogometna liga</h1>
+          </div>
+          <div class="supersport-logo justify-content">
+            <a href="https://hnl.hr/"
+              ><img
+                class="supersport-logo-image"
+                src="images/hnl/hnl_hq_2022.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="super-sport-description-container">
+            <div class="super-sport-description-text">
+              <h3 class="text-description-style">Hrvatska nogometna liga je najviša nogometna liga u Hrvatskoj, koja se sastoji od 10 klubova. Liga se igra u proljetno-jesenskom formatu, pri čemu se svaki klub susreće četiri puta s ostalim klubovima, dva puta na domaćem terenu, a dva put na terenu protivnika.<br><br>
+                Hrvatska nogometna liga je osnovana 1991. godine, nakon što se Hrvatska proglasila neovisnom državom. Najuspješniji klub u povijesti lige je Dinamo Zagreb, koji je osvojio 22 naslova prvaka, dok je Hajduk Split osvoji 4 naslova, NK Zagreb i HNK Rijeka osvojili su po 1 naslova prvaka.<br><br>
+                Hrvatska nogometna liga igra se na profesionalnoj razini, a njezini klubovi natječu se i u europskim nogometnim natjecanjima poput <a href="https://www.uefa.com/uefachampionsleague/"> UEFA Lige prvaka </a>, <a href="https://www.uefa.com/uefaeuropaleague/"> UEFA Europa lige </a> i <a href="https://www.uefa.com/uefaeuropaconferenceleague/"> UEFA Konferencijske lige </a>. Liga ima veliku podršku navijača diljem Hrvatske, a nogomet je jedan od najpopularnijih sportova u zemlji.
+                <br><br>
+                <a href="https://hr.wikipedia.org/wiki/Hrvatska_nogometna_liga">HNL Wikipedija</a>
+              </h3>
+            </div>
+            <div class="super-sport-decsription-show-more">
+              <button class="show-more-button" id="smbtn1">Show more <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+          </div>
+          <div class="supersport-clubs">
+            <div class="clubs-title">
+              <div class="title-align-wrapper">
+                <h1>HNL klubovi</h1>
+              </div>
+            </div>
+            <div class="clubs">
+              <a class="club-logo-and-title" href="https://gnkdinamo.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/dinamo.png"
+                  alt="GNK Dinamo"
+                />
+                <h2 class="club-title">GNK Dinamo</h2>
+              </a>
+
+              <a class="club-logo-and-title" href="https://hajduk.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/hajduk.png"
+                  alt="HNK Hajduk"
+                />
+                <h2 class="club-title">HNK Hajduk</h2></a
+              >
+              <a class="club-logo-and-title" href="https://nk-osijek.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/osijek.png"
+                  alt="NK Osijek"
+                />
+                <h2 class="club-title">NK Osijek</h2></a
+              >
+              <a class="club-logo-and-title" href="https://nk-rijeka.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/rijeka.png"
+                  alt="HNK Rijeka"
+                />
+                <h2 class="club-title">HNK Rijeka</h2></a
+              >
+              <a class="club-logo-and-title" href="https://nklokomotiva.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/lokomotiva.png"
+                  alt="NK Lokomotiva"
+                />
+                <h2 class="club-title">NK Lokomotiva</h2></a
+              >
+              <a class="club-logo-and-title" href="https://www.hnk-gorica.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/gorica.png"
+                  alt="HNK Gorica"
+                />
+                <h2 class="club-title">NK Gorica</h2></a
+              >
+              <a class="club-logo-and-title" href="https://nkistra.com/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/istra.png"
+                  alt="NK Istra"
+                />
+                <h2 class="club-title">NK Istra</h2></a
+              >
+              <a class="club-logo-and-title" href="https://www.hnk-sibenik.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/sibenik.png"
+                  alt="HNK Šibenik"
+                />
+                <h2 class="club-title">HNK Šibenik</h2></a
+              >
+              <a class="club-logo-and-title" href="https://nk-slaven-belupo.hr/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/slaven.png"
+                  alt="NK Slaven Belupo"
+                />
+                <h2 class="club-title">NK Slaven Belupo</h2></a
+              >
+              <a class="club-logo-and-title" href="https://www.nk-varazdin.hr/news/" target="_blank"
+                ><img
+                  class="clubs-logo-size club-logo"
+                  src="images/hnl/klubovi/varazdin.png"
+                  alt="NK Varaždin"
+                />
+                <h2 class="club-title">NK Varaždin</h2></a
+              >
+            </div>
+          </div>
+          <div class="supersport-table">
+            <div class="title-align-wrapper hnl-table-title-background-color">
+              <h1>HNL tablica</h1>
+            </div>
+            <div class="supersport-table-container">
+              <table class="table-style" cellpadding="0" cellspacing="0">
+                <thead class="tbl-header">
+                  <tr>
+                    <th>#</th>
+                    <th class="width-fit">Klub</th>
+                    <th>Uk</th>
+                    <th>Pob</th>
+                    <th>Ner</th>
+                    <th>Por</th>
+                    <th>G+</th>
+                    <th>G-</th>
+                    <th>GR</th>
+                    <th>Bod</th>
+                  </tr>
+                </thead>
+                <tbody class="tbl-content">
+                  <tr>
+                    <td>1.</td>
+                    <td>Dinamo</td>
+                    <td>29</td>
+                    <td>20</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>69</td>
+                    <td>26</td>
+                    <td>+43</td>
+                    <td>66</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td>Hajduk</td>
+                    <td>29</td>
+                    <td>16</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>53</td>
+                    <td>41</td>
+                    <td>+12</td>
+                    <td>54</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td>Rijeka</td>
+                    <td>29</td>
+                    <td>12</td>
+                    <td>5</td>
+                    <td>12</td>
+                    <td>35</td>
+                    <td>35</td>
+                    <td>0</td>
+                    <td>41</td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                    <td>Osijek</td>
+                    <td>29</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>36</td>
+                    <td>33</td>
+                    <td>+3</td>
+                    <td>39</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                    <td>Varaždin</td>
+                    <td>29</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>34</td>
+                    <td>39</td>
+                    <td>-5</td>
+                    <td>39</td>
+                  </tr>
+                  <tr>
+                    <td>6.</td>
+                    <td>Istra 1961</td>
+                    <td>29</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>28</td>
+                    <td>31</td>
+                    <td>-3</td>
+                    <td>37</td>
+                  </tr>
+                  <tr>
+                    <td>7.</td>
+                    <td>Slaven Belupo</td>
+                    <td>29</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>22</td>
+                    <td>37</td>
+                    <td>-15</td>
+                    <td>37</td>
+                  </tr>
+                  <tr>
+                    <td>8.</td>
+                    <td>Lokomotiva</td>
+                    <td>29</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>13</td>
+                    <td>39</td>
+                    <td>42</td>
+                    <td>-3</td>
+                    <td>34</td>
+                  </tr>
+                  <tr>
+                    <td>9.</td>
+                    <td>Šibenik</td>
+                    <td>29</td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>20</td>
+                    <td>38</td>
+                    <td>-18</td>
+                    <td>24</td>
+                  </tr>
+                  <tr>
+                    <td>10.</td>
+                    <td>Gorica</td>
+                    <td>29</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>16</td>
+                    <td>27</td>
+                    <td>41</td>
+                    <td>-14</td>
+                    <td>23</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="croatia-container">
+          <div class="croatia-title">
+            <div class="title-align-wrapper">
+              <h1 id="section-5" >Hrvatska reprezentacija</h1>
+            </div>
+          </div>
+          <div class="croatia-wc-russia">
+            <div class="text-croatia-sp">
+              <h2 class="text-font padding-1rem">Hrvatska reprezentacija proslava osvojene srebrne medalje na svjedskom prvenstvu u Rusiji 2018 koje predstavlja najveće dostignuće A reprezentacije</h2>
+            </div>
+            <div class="croatia-sp-russia-image">
+              <img data-modal-target="#modal9"
+              class="croatia-sp-image-2018"
+              style="height: 100%; width: 100%; object-fit: contain"
+              src="images/Hrvatska_reprezentacija/vatreni_rusija.jpg" alt="Svjetsko 98">
+            </div>
+          </div>
+          <div class="croatian-medals">
+            <div class="medal-title">
+              <div class="title-align-wrapper">
+                <span class="text-font text-size-2rem"> Osvojene medalje </span>
+              </div>
+            </div>
+            <div class="medal-container-1">
+              <div class="medal-wrapper">
+                <img class="medal-size" src="images/Hrvatska_reprezentacija/bronce_medal.png" alt="Francuska 98">
+                <a href="https://hr.wikipedia.org/wiki/Svjetsko_prvenstvo_u_nogometu_%E2%80%93_Francuska_1998." target="_blank"><span class="text-font text-size">Bronca iz Francuske 98.</span></a>
+              </div>
+            </div>
+            <div class="medal-container-2">
+              <div class="medal-wrapper">
+                <img class="medal-size" src="images/Hrvatska_reprezentacija/silver_medal.webp" alt="Francuska 98">
+                <a href="https://hr.wikipedia.org/wiki/Svjetsko_prvenstvo_u_nogometu_%E2%80%93_Rusija_2018." target="_blank"><span class="text-font text-size">Srebro iz Rusije 2018.</span></a>
+              </div>
+            </div>
+            <div class="medal-container-3">
+              <div class="medal-wrapper">
+                <img class="medal-size" src="images/Hrvatska_reprezentacija/bronce_medal.png" alt="Francuska 98">
+                <a href="https://hr.wikipedia.org/wiki/Svjetsko_prvenstvo_u_nogometu_%E2%80%93_Katar_2022." target="_blank"><span class="text-font text-size">Bronca iz Katara 2022.</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="luka-modric-container">
+            <div class="luka-modric-text">
+              <h2 class="text-font padding-1rem"><a target="_blank" href="https://hr.wikipedia.org/wiki/Luka_Modri%C4%87"> Luka Modrić</a> najbolji je igrač <a target="_blank" href="https://hr.wikipedia.org/wiki/Hrvatska_nogometna_reprezentacija">Hrvatske nogometne reprezentacije</a>, a osim što je Hrvatsku u dva navrata vodio do postolja, na <a href="https://hr.wikipedia.org/wiki/Svjetsko_prvenstvo_u_nogometu_%E2%80%93_Rusija_2018." target="_blank">svjetskom prvenstvu 2018. u Rusiji</a> proglašen je najboljim igračem svjetskog prvenstva te je osvojio zlatnu loptu.<br><br>Po mnogima Luka Modrić jedan je od najboljih veznih igrača koji su ikada igrali na toj poziciji. Luka trenuto igra za <a href="https://www.realmadrid.com/">Real Madrid u La Ligi</a> </h2>
+            </div>
+            <div class="luka-modric-image">
+              <img data-modal-target="#modal8"
+              class="luka-modric-image-cut"
+              style="height: 100%; width: 100%; object-fit: contain"
+              src="images/Hrvatska_reprezentacija/luka_modric.jpeg" alt="Svjetsko 98">
+            </div>
+          </div>
+        </div>
+        <div class="authors-container">
+          <div class="authors-title-container">
+            <h1 id="section-6" class="authors-title">Autori</h1>
+          </div>
+          <div class="authors-content">
+            <div class="first-author-details authors-style mouse-over-sound" id="firstAUthorContainer">
+              <img data-modal-target="#modal6"
+                class="authors-image"
+                src="images/best_players/Antoine-Griezmann-800x600.jpg"
+                alt=""
+              />
+              <h3 id="show-more-first">Dejan Mihić</h3>
+              <span data-modal-target="#modala1" class="sport-pointer" id="sport_1">Bavim li se i ja ovim sportom<br>ili ga samo volim?</span>
+              <div class="first-author-more-details" id="firstAuthorDetails">
+                <h2>Opće informacije</h2>
+                <span>ime: Dejan</span>
+                <span>Prezime: Mihić</span>
+                <span>Mjesto rođenja: <a href="https://nasice.com/">Našice</a></span>
+                <span>Mjesto stanovanja: <a href="https://www.podgorac.hr/">Podgorač</a></span>
+                <span>Mjesto boravišta: <a href="https://www.osijek.hr/">Osijek</a></span>
+                <h2>Obrazovanje</h2>
+                <span>Osnovna škola: <a href="http://os-hjuhna-podgorac.skole.hr/">OŠ Hinka Juhna Podgorač</a></span>
+                <span
+                  >Srednja Škola: <a href="http://ss-ikrsnjavoga-nasice.skole.hr/">SŠ Isidora Kršnjavoga Našice</a></span
+                >
+                <span>Zanimanje: Tehničar za elektroniku</span>
+                <span>Studiji: <a href="https://www.ferit.unios.hr/">Ferit</a></span>
+                <h2>Ostalo</h2>
+                <span>Hobiji: <a href="https://hr.wikipedia.org/wiki/Biciklizam">Biciklizam</a></span>
+                <span>Ostale aktivnosti: <a href="http://fc-xxl.hr/">Gym</a></span>
+                <br />
+              </div>
+            </div>
+            <div class="second-author-details authors-style mouse-over-sound" id="secondAUthorContainer">
+              <img data-modal-target="#modal7"
+                class="authors-image"
+                src="images/best_players/Antoine-Griezmann-800x600.jpg"
+                alt=""
+              />
+              <h3 id="show-more-second">Mando Maznik</h3>
+              <span data-modal-target="#modala2" class="sport-pointer" id="sport_2">Bavim li se i ja ovim sportom<br>ili ga samo volim?</span>
+              <div class="second-author-more-details" id="secondAuthorDetails">
+                <h2>Opće informacije</h2>
+                <span>ime: Mando</span>
+                <span>Prezime: Maznik</span>
+                <span>Mjesto rođenja: <a href="">Našice</a></span>
+                <span>Mjesto stanovanja: <a href="">Podgorač</a></span>
+                <span>Mjesto boravišta: <a href="">Osijek</a></span>
+                <h2>Obrazovanje</h2>
+                <span>Osnovna škola: <a href="">OŠ Hinka Juhna Podgorač</a></span>
+                <span
+                  >Srednja Škola: <a href="">SŠ Isidora Kršnjavoga Našice</a></span
+                >
+                <span>Zanimanje: Tehničar za elektroniku</span>
+                <span>Studiji: <a href="">Ferit</a></span>
+                <h2>Ostalo</h2>
+                <span>Hobiji: <a href="">Biciklizam</a></span>
+                <span>Ostale aktivnosti: <a href="">Gym</a></span>
+                <br />
+            </div>
+          </div>
+        </div>
+        <div class="footer-container">
+          <div class="web-page-description">
+            <div class="web-page-description-details">
+              <span style="color:white;">Ova Web stranica nastala je za vrijeme pohađanaj <a style="color:orange;" href="https://www.ferit.unios.hr/" target="_blank">Fakulteta Elektrotehnike Računarstva i informacijskih Tehnologija</a>  u Osijeku za potrebe polaganja kolegija <a style="color:orange;" href="https://www.ferit.unios.hr/upisi-i-studiji/preddiplomski-strucni-studiji#racunarstvo#SR601" target="_blank">Multimedijska Tehnika</a></span>
+            </div>
+          </div>
+          <div class="ferit-logo">
+            <a href="https://www.ferit.unios.hr/" target="_blank"><img class="ferit-logo-style" src="images/Ferit/ferit.png" alt=""></a>
+          </div>
+        </div>
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title">Antoine Griezmann</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/best_players/Antoine-Griezmann-800x600.jpg" alt="">
+          </div>
+        </div>
+        <div class="modal" id="modal2">
+          <div class="modal-header">
+            <div class="title">Luka Modrić</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/best_players/LukaModric.jpeg" alt="Luka Modrić">
+          </div>
+        </div>
+        <div class="modal" id="modal3">
+          <div class="modal-header">
+            <div class="title">Cristiano Ronaldo</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/best_players/Cristiano Ronaldo.jpg" alt="Cristiano Ronaldo">
+          </div>
+        </div>
+        <div class="modal" id="modal4">
+          <div class="modal-header">
+            <div class="title">Lionel Messi</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/best_players/Lionel Messi.jpg" alt="Lionel Messi">
+          </div>
+        </div>
+        <div class="modal" id="modal5">
+          <div class="modal-header">
+            <div class="title">Kylian Mbappé</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/best_players/Kylian Mbappé.jpg" alt="Kylian Mbappé">
+          </div>
+        </div>
+
+        <div class="modal" id="modal6">
+          <div class="modal-header">
+            <div class="title">Dejan Mihić</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/best_players/Antoine-Griezmann-800x600.jpg" alt="Dejan Mihić">
+          </div>
+        </div>
+        <div class="modal" id="modal7">
+          <div class="modal-header">
+            <div class="title">Mando Maznik</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/best_players/Antoine-Griezmann-800x600.jpg" alt="Mando Maznik">
+          </div>
+        </div>
+        <div class="modal" id="modal8">
+          <div class="modal-header">
+            <div class="title">Luka modrić</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/Hrvatska_reprezentacija/luka_modric.jpeg" alt="Luka Modrić">
+          </div>
+        </div>
+        <div class="modal" id="modal9">
+          <div class="modal-header">
+            <div class="title">Hrvatska reprezentacija</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <img src="images/Hrvatska_reprezentacija/vatreni_rusija.jpg" alt="Hrvatska reprezentacija">
+          </div>
+        </div>
+
+        <div class="modal" id="modala1">
+          <div class="modal-header">
+            <div class="title">Bavim li se i ja Nogometom</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="do-i-play-football-container">
+              <div class="first-do-i-play-description">
+                <h3 class="text-description-style align-center">" Nikada nisam profesionalno ili poluprofesionalno igrao nogomet, iako znao sam igrati mali nogomet s mojim prijateljima "</h3>
+                <img class="right-line" src="images/bavim_li_se_nogometom/nop.gif" alt="">
+              </div>
+              <div class="first-do-i-play-description background-image-croatia">
+                <img class="right-line image-width-modal" src="images/bavim_li_se_nogometom/giphy (1).gif" alt="">
+                <h3 class="text-description-style align-center text-color-white text-background">" Nogomet sam zavoli još davne 1998. godine kada je Hrvatska osvojila prvu medalju na nekom natjecanju, iako sam tada imao 8 godina. Bio je to nezaboravan događaj "</h3>
+              </div>
+              <div class="first-do-i-play-description background-image-sloga">
+                <h3 class="text-description-style align-center text-color-white text-background">" Iako ne igram za lokalni klub NK Sloga Podgorač, njihov sam veliki navijač "</h3>
+                <a href="https://web.facebook.com/people/Nk-Sloga-Podgora%C4%8D/100063592987416/?_rdc=1&_rdr"><img class="right-line image-width-modal" src="images/bavim_li_se_nogometom/sloga grb.jpg" alt=""></a>
+              </div>
+              <div class="first-do-i-play-description background-image-osijek">
+                <a href="https://nk-osijek.hr/"><img class="right-line image-width-modal" src="images/hnl/klubovi/osijek.png" alt=""></a>
+                <h3 class="text-description-style align-center text-color-white text-background">" U Hrvatskoj navijam za Osijek i radujem se otvaranju novog stadiona na Pampasu koji će biti uvjerljivo najbolji i najmoderniji stadion u Hrvatskoj "</h3>
+              </div>
+              <div class="first-do-i-play-description ">
+                <img class="right-line image-width-modal" src="images/bavim_li_se_nogometom/bye.gif" alt="">
+                <h3 class="text-description-style align-center text-color-white">" Pozdrav! "</h3>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal" id="modala2">
+          <div class="modal-header">
+            <div class="title">Bavim li se i ja Nogometom</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <h1>Mando Maznik</h1>
+          </div>
+        </div>
+        <div class="modal" id="modalvideo1">
+          <div class="modal-header">
+            <div class="title">Hrvatska na Svjetskom prvenstvu 2018 u Rusiji</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/46cpeN5Ngow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          </div>
+        </div>
+        <div id="overlay"></div>
+        <button id="onTopButton" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+      </div>
+    </div>
+    <script src="js.js"></script>
+    <script src="modal.js"></script>
+    <script src="player.js"></script>
+  </body>
+</html>
