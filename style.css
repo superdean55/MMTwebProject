@@ -400,7 +400,7 @@ h1 {
 .second-author-details {
   display: flex;
   flex-direction: column;
-  height: 22rem;
+  height: 30rem;
   grid-column: 4/5;
   grid-row: 1/2;
 }
@@ -718,6 +718,24 @@ td {
 }
 .background-image-osijek {
   background-image: url(images/bavim_li_se_nogometom/2023-03-28.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-moslavina {
+  height: 22rem;
+  background-image: url(images/Mando\ Maznik/igraci.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-moslavina2 {
+  height: 22rem;
+  background-image: url(images/Mando\ Maznik/igraci2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-moslavina3 {
+  height: 22rem;
+  background-image: url(images/Mando\ Maznik/stadion.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
