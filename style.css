@@ -377,7 +377,7 @@ h1 {
 .first-author-details {
   display: flex;
   flex-direction: column;
-  height: 22rem;
+  height: 30rem;
   grid-column: 2/3;
   grid-row: 1/2;
 }
