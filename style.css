@@ -757,6 +757,7 @@ td {
 .play-icon {
   color: rgba(0, 255, 222, 1);
   font-size: 4rem;
+  cursor: pointer;
 }
 .football-main-title {
   color: rgba(0, 255, 222, 1);
