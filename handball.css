@@ -1,0 +1,816 @@
+:root {
+  --color: rgba(240, 255, 254, 0.685);
+  --sectioncolor: rgba(0, 107, 213, 0.685);
+  --box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.59);
+  --titlecolor: rgba(1, 1, 1, 0.545);
+  --footercolor: rgb(44, 44, 44);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+a {
+  text-decoration: none;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: silver;
+  margin: 0px;
+  padding: 0px;
+}
+.main-grid-container {
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+.navbar-container {
+  padding: 0;
+  grid-column: 1/4;
+  grid-template-rows: 1/2;
+  background: rgb(39, 33, 131);
+  background: linear-gradient(
+    90deg,
+    rgba(39, 33, 131, 1) 0%,
+    rgba(15, 123, 140, 1) 47%,
+    rgba(0, 255, 222, 1) 100%
+  );
+  display: flex;
+  flex-direction: row;
+}
+
+.image-container {
+  background: url(images/handball/background/handball_main.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+.image-wrapper {
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 25rem 1fr 2fr 1fr;
+  grid-template-rows: auto;
+}
+.choose-sport-container {
+  gap: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/6;
+  grid-row: 1/2;
+}
+.choose-football {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.choose-handball {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.music-player-container {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.title-and-play-button-container {
+  display: flex;
+  flex-direction: column;
+  grid-column: 4/5;
+  grid-row: 2/3;
+  gap: 3rem;
+}
+.content-container {
+  border-top: 2px solid rgba(0, 0, 0, 0.825);
+  box-shadow: var(--box-shadow);
+  background: url(images/handball/background/handball_second_2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+h1 {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 3rem;
+  height: auto;
+}
+
+.gallery-container {
+  grid-column: 1/4;
+  grid-row: 4/5;
+  display: grid;
+  grid-template-columns: auto;
+  grid-row: 2rem auto;
+}
+.best-leagues-container {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: var(--color);
+  grid-column: 1/4;
+  grid-row: 5/6;
+  display: grid;
+  grid-template-columns: auto;
+  grid-row: auto;
+}
+.best-leagues-title {
+  background-color: var(--titlecolor);
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.best-leagues {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.best-leagues-image {
+  height: 10rem;
+}
+.supersport-hnl-container {
+  /* padding: 1rem; */
+  background-color: var(--color);
+  grid-column: 1/4;
+  grid-row: 6/7;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-row: auto;
+}
+.supersport-title-container {
+  height: 30rem;
+  background-image: url(images/handball/hrvatska_rukometna_reprezentacija/duvnjak.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.supersport-logo {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.super-sport-description-container {
+  margin: 0;
+  border: 2px solid var(--footercolor);
+  border-radius: 1rem;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  padding: 1rem;
+  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem auto;
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    rgba(39, 239, 255, 0.5551470588235294) 0%,
+    rgba(0, 68, 149, 0.5327380952380952) 100%
+  );
+}
+.super-sport-description-container.activate {
+  grid-template-rows: auto auto;
+}
+.super-sport-description-text {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.text-description-style {
+  margin: 0;
+  font-family: cursive;
+}
+.super-sport-decsription-show-more {
+  display: flex;
+  justify-self: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.supersport-clubs {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.clubs-title {
+  background-color: var(--titlecolor);
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.title-align-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.clubs {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+/* .club-wrapper {
+    
+    width: fit-content;
+  } */
+.club-logo-and-title {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+.club-logo {
+  width: fit-content;
+}
+.club-title {
+  width: 12rem;
+}
+.clubs-logo-size {
+  height: 4rem;
+}
+.supersport-table {
+  display: none;
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+.hnl-table-title-background-color {
+  background-color: var(--titlecolor);
+}
+.croatia-container {
+  /* padding: 1rem; */
+  background-color: var(--color);
+  grid-column: 1/4;
+  grid-row: 7/8;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-row: auto;
+}
+.croatia-title {
+  background-color: var(--titlecolor);
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.croatia-wc-russia {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.text-croatia-sp {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.croatia-sp-russia-image {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.padding-1rem {
+  padding: 1rem;
+}
+.croatia-sp-image-2018 {
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+.croatian-medals {
+  padding: 1rem;
+  background-color: var(--color);
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+}
+.medal-title {
+  padding-bottom: 1rem;
+  grid-column: 1/8;
+  grid-row: 1/2;
+}
+.medal-container-1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.medal-container-2 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.medal-container-3 {
+  grid-column: 6/7;
+  grid-row: 2/3;
+}
+.medal-size {
+  width: 12rem;
+}
+.medal-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.luka-modric-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.luka-modric-image {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.luka-modric-text {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.luka-modric-image-cut {
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+.back-ground-black {
+  background-color: rgba(0, 0, 0, 0.481);
+}
+.text-color-white {
+  color: white;
+}
+.text-font {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.text-size {
+  font-size: 1.2rem;
+}
+.text-size-2rem {
+  font-size: 2rem;
+}
+.authors-container {
+  grid-column: 1/4;
+  grid-row: 8/9;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.authors-title-container {
+  background-color: var(--titlecolor);
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.authors-title {
+  display: flex;
+  justify-content: center;
+}
+.authors-content {
+  /* background-image: url(images/Ferit/Galerija-Ferit-7.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+  /* background: linear-gradient(-45deg, #000000, #737272, #333333);
+    background-size: 400% 400%;
+    animation: gradient-bg 20s ease infinite; */
+  background: rgb(200, 200, 200);
+  /* background: radial-gradient(
+      circle,
+      rgba(125, 125, 125, 1) 42%,
+      rgba(0, 0, 0, 1) 100%
+    ); */
+  padding: 1rem;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-rows: auto;
+}
+/* @keyframes gradient-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } */
+.author-name-style {
+  background-color: rgb(97, 97, 97);
+  border-radius: 5px;
+  padding: 5px;
+}
+.author-name-style:hover {
+  border-radius: 5px;
+  background-color: rgb(192, 192, 192);
+}
+.first-author-details {
+  display: flex;
+  flex-direction: column;
+  height: 32rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.first-author-details.activate {
+  height: auto;
+}
+.first-author-more-details {
+  display: none;
+}
+.first-author-more-details.activate {
+  display: flex;
+  flex-direction: column;
+}
+.sport-pointer {
+  background-color: rgb(97, 97, 97);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.sport-pointer:hover {
+  border-radius: 5px;
+  background-color: rgb(192, 192, 192);
+}
+#show-more-first {
+  cursor: pointer;
+}
+.second-author-details {
+  display: flex;
+  flex-direction: column;
+  height: 32rem;
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.second-author-details.activate {
+  height: auto;
+}
+.second-author-more-details {
+  display: none;
+}
+.second-author-more-details.activate {
+  display: flex;
+  flex-direction: column;
+}
+#show-more-second {
+  cursor: pointer;
+}
+.authors-style {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.355);
+  width: auto;
+}
+.authors-style:hover {
+  box-shadow: var(--box-shadow);
+}
+.authors-image {
+  width: 300px;
+}
+.footer-container {
+  grid-column: 1/4;
+  grid-row: 9/10;
+  background-color: var(--footercolor);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr 5fr 1fr;
+  grid-template-rows: auto;
+}
+.ferit-logo {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.ferit-logo-style {
+  width: 15rem;
+}
+.web-page-description {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.web-page-description-details {
+  text-align: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.how-to-play-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+.content-wrapper {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding: 2rem 5%;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 21rem;
+}
+.first-content-container {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  /* background-color: var(--color); */
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.second-content-container {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+/* .second-content {
+    background-image: url(images/other_logo/Collina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+
+.all-content-style {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  padding: 0.5rem;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.content-style {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  cursor: pointer;
+}
+.box-shadow:hover {
+  box-shadow: var(--box-shadow);
+}
+.h1-setup {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 3rem;
+  color: rgb(172, 22, 22);
+}
+
+.anocher-remove-styles {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit;
+  height: auto;
+}
+.anocher-remove-styles:hover {
+  box-shadow: inset 0px 0px 56px 4px rgba(127, 255, 212, 0.8);
+  border-left: 0px solid rgb(127, 255, 212);
+  border-right: 0px solid aqua;
+}
+.align-center {
+  display: flex;
+  align-self: center;
+}
+
+.justify-content {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  padding-left: 1rem;
+  height: 3rem;
+}
+
+.margin-left {
+  margin-left: auto;
+}
+
+.gallery-title {
+  background-color: var(--titlecolor);
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.gallery {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  --n: 1; /* number of rows*/
+  --m: 5; /* number of columns */
+  --g: 0px; /* control the gap */
+  --f: 0.8; /* control the scale factor */
+
+  display: grid;
+  gap: var(--g);
+  width: 100%;
+  height: 30rem;
+  grid-template-columns: repeat(var(--m), auto);
+}
+.gallery > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(80%);
+  transition: 0.35s linear;
+}
+
+.gallery img:hover {
+  filter: grayscale(0);
+  width: calc(100vh * var(--f) / var(--n));
+  height: calc(100vw * var(--f) / var(--m));
+}
+
+.supersport-logo-image {
+  display: none;
+  height: 6rem;
+}
+
+/* Table - ljestvica super sport */
+.table-style {
+  /* old colors 
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4); */
+  background: rgb(159, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(159, 0, 0, 1) 54%,
+    rgba(255, 113, 113, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+.tbl-header {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.tbl-content {
+  height: auto;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+.width-fit {
+  width: 8rem;
+}
+.intro-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+#onTopButton {
+  display: block; /* sakriti gumb po defaultu */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#onTopButton:hover {
+  box-shadow: var(--box-shadow);
+}
+.show-more-button {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+/* do i play footbal grid */
+.do-i-play-football-container {
+  width: 800px;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  overflow-y: scroll;
+  gap: 0.5rem;
+}
+
+.first-do-i-play-description {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 0.5rem;
+}
+.background-image-croatia {
+  background-image: url(images/bavim_li_se_nogometom/1998_QF_Suker_0-1_FRA_CRO.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-sloga {
+  background-image: url(images/bavim_li_se_nogometom/sloga_momcad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-osijek {
+  background-image: url(images/bavim_li_se_nogometom/2023-03-28.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-moslavina {
+  height: 22rem;
+  background-image: url(images/Mando\ Maznik/igraci.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-moslavina2 {
+  height: 22rem;
+  background-image: url(images/Mando\ Maznik/igraci2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-image-moslavina3 {
+  height: 22rem;
+  background-image: url(images/Mando\ Maznik/stadion.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* .first-do-i-play-description > img {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+  } */
+.text-color-green {
+  color: rgb(42, 176, 69);
+}
+.text-color-white {
+  color: rgb(247, 247, 247);
+}
+.text-background {
+  background-color: rgba(0, 0, 0, 0.474);
+}
+.image-width-modal {
+  width: 250px;
+}
+.play-icon {
+  color: rgb(255, 21, 0);
+  font-size: 4rem;
+  cursor: pointer;
+}
+.football-main-title {
+  color: rgb(255, 21, 0);
+  font-size: 6rem;
+  display: block;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.basketball {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.choose-style {
+  font-size: 5rem;
+  display: block;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.choose-football-color {
+  color: rgba(0, 255, 222, 1);
+}
+.choose-handball-color {
+  color: rgb(255, 21, 0);
+}
+.choose-center {
+  display: flex;
+  justify-content: center;
+}
