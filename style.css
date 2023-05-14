@@ -25,7 +25,7 @@ body {
   max-width: 1300px;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: auto 35rem auto;
+  grid-template-rows: auto auto auto;
 }
 .navbar-container {
   padding: 0;
@@ -50,22 +50,37 @@ body {
   grid-row: 2/3;
 }
 .image-wrapper {
-  padding-top: 1rem;
   padding-bottom: 1rem;
   display: grid;
   grid-template-columns: 1fr 25rem 1fr 2fr 1fr;
   grid-template-rows: auto;
 }
+.choose-sport-container {
+  gap: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1/6;
+  grid-row: 1/2;
+}
+.choose-football {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.choose-handball {
+  padding: 1rem;
+  border-radius: 1rem;
+}
 
 .music-player-container {
   grid-column: 2/3;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 .title-and-play-button-container {
   display: flex;
   flex-direction: column;
   grid-column: 4/5;
-  grid-row: 1/2;
+  grid-row: 2/3;
   gap: 3rem;
 }
 .content-container {
@@ -785,4 +800,19 @@ td {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+}
+.choose-style {
+  font-size: 5rem;
+  display: block;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.choose-football-color {
+  color: rgba(0, 255, 222, 1);
+}
+.choose-handball-color {
+  color: rgb(255, 21, 0);
+}
+.choose-center {
+  display: flex;
+  justify-content: center;
 }
