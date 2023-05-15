@@ -255,6 +255,7 @@ h1 {
   grid-row: auto;
 }
 .croatia-title {
+  display: none;
   background-color: var(--titlecolor);
   grid-column: 1/2;
   grid-row: 1/2;
@@ -285,7 +286,9 @@ h1 {
   grid-column: 1/2;
   grid-row: 3/4;
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  grid-template-rows: auto;
 }
 .medal-title {
   padding-bottom: 1rem;
@@ -303,6 +306,18 @@ h1 {
 .medal-container-3 {
   grid-column: 6/7;
   grid-row: 2/3;
+}
+.medal-container-4 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.medal-container-5 {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+.medal-container-6 {
+  grid-column: 6/7;
+  grid-row: 3/4;
 }
 .medal-size {
   width: 12rem;
